@@ -16,7 +16,7 @@
     
     <!-- Pré-carregamento de assets -->
     <a-assets>
-      <video id="video1" src="./video.mp4" loop playsinline></video>
+      <video id="video1" src="./video.mp4" loop playsinline muted ></video>
       <!--a-asset-item id="modelo3d" src="./modelo.glb"></a-asset-item>
       <img id="imagem1" src="./arte.png"-->
     </a-assets>
@@ -47,6 +47,7 @@
       sceneEl.addEventListener('targetFound', () => {
         if(videoEl.paused) {
           videoEl.play();
+          videoEl.muted = false;
         }
       });
 
